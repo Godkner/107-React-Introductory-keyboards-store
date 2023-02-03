@@ -39,3 +39,16 @@
 .product .add {
     margin-top: 6px;
 }
+
+@media (max-width: 400px){
+    .product{
+        width: 87%;
+        margin-left: 2%;
+    }
+
+    .product img{
+        width: 90px;
+        height: auto;
+        max-height: 500px;
+    }
+}
