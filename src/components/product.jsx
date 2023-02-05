@@ -32,11 +32,12 @@ function Product(props){
             <h5>{props.data.title}</h5>
             <div className="prices">
             <label>Total ${getTotal()}</label>
-            <label>Price ${props.data.price.toFixed(2)}</label></div>
+            <label>Price ${props.data.price.toFixed(2)}</label>
+            </div>
             
             <QuantityPicker onChange={onQuantityChange}>
             </QuantityPicker>
-            <button onClick={addProduct} className="btn btn-sm btn-outline-dark">Add to car</button>
+            <button onClick={addProduct} className="add btn btn-sm btn-outline-dark">Add to car</button>
         </div>
     )
 }

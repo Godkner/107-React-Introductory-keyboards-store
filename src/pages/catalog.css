@@ -1,3 +1,23 @@
 .btn-filter{
     margin: 5px;
 }
+
+.catalog .btn-filter{
+    margin:  5px;
+} 
+
+.catalog{
+    display: inline-block;
+    background-color: #00337C;
+  
+}
+.catalog .filter{
+    display: block;
+
+}
+h1{
+    color: white;
+}
+h5{
+    color: white;
+}
