@@ -4,3 +4,7 @@ cd <drag folder here>
 
 # start react project
 npm start
+
+#see current repo url
+git remote -v
+
