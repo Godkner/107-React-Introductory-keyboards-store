@@ -1,0 +1,13 @@
+.adminCoupon{
+    display: block;
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.adminCoupon{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

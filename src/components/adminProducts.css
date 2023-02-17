@@ -1,0 +1,13 @@
+.ad-products{
+    display: block;
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.ad-products h3{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

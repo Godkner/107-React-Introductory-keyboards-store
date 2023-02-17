@@ -1,9 +1,13 @@
 import './home.css';
+import {Link} from 'react-router-dom'
 
 function Home(){
     return(
         <div className='home'>
-            <h1>Home page</h1>
+            <h1>Welcome to Mechanical Keyboards</h1>
+            
+
+            <Link className='btn btn-primary' to="/catalog">Check our amazing catalog </Link>        
         </div>
     )
 }
