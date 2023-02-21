@@ -10,12 +10,13 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/home';
 import About from './pages/about';
 import NotFound from './pages/notFound';
+import GlobalData from './store/globalData';
 
 function App() {
   return (
+  <GlobalData>
     <BrowserRouter>
     <div className="App">      
-      <Navbar></Navbar>
       <Routes>
         <Route path='/' element= {<Home />}></Route>
         <Route path='/home' element= {<Home />}></Route>
@@ -29,6 +30,7 @@ function App() {
       
     </div>
     </BrowserRouter>
+  </GlobalData>
   );
 }
 

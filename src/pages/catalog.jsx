@@ -56,7 +56,7 @@ function Catalog(){
            <h5>We have {products.length} products ready for you!</h5>
         <div className="filter">
 
-           {categories.map(c => <button onClick={()=> filter(c)} className="btn btn-sm btn-light btn-filter">{c}</button> )}
+           {categories.map(c => <button onClick={()=> filter(c)} key={c} className="btn btn-sm btn-light btn-filter">{c}</button> )}
             <button className="btn btn-sm btn-dark btn-filter"onClick={clearFilter}>All</button>
         </div>
            {prodsToDisplay.map(p => <Product key={p._id} data={p}></Product>)};
