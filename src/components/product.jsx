@@ -25,19 +25,20 @@ function Product(props){
         return total.toFixed(2);
     }
 
-    function addProduct(){
-        console.log(`Adding ${quantity} ${props.data.title}`);
+    // function addProduct(){
+    //     console.log(`Adding ${quantity} ${props.data.title}`);
         
-    }
+    // }
 
     function handleAdd(){
         console.log("Button clicked",props.data);
-        addProductToCart(props.data);
+        let copy= {...props.data, quantity:quantity};
+        addProductToCart(copy);
     }
     
     return(
         <div className="product">
-
+            
 
             <img src={"/images/" + props.data.image } alt="" />
             <h5>{props.data.title}</h5>

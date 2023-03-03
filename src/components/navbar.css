@@ -14,7 +14,7 @@ Link{
     color: black;
 }
 
-button {
+.addCart {
     background: #ffffff;
     padding: 15px;
     color: #000000;
@@ -25,17 +25,17 @@ button {
     transition: all .5s ease-in-out;
   }
   
-  button:hover {
+  .addCart:hover {
     border-radius: 50%;
     transition: all .5s ease-in-out;
   }
   
-  button:hover:before {
+  .addCart:hover:before {
     margin-left: 0%;
     transform: rotate(24deg);
   }
   
-  button::before {
+  .addCart::before {
     content: "";
    
     height: 50px;

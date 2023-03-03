@@ -51,8 +51,10 @@
 .card .image img {
 max-width: 110px;   
 min-width: none;
+  
    
-    
-    
-   
+}
+
+.l{
+   color: black;
 }

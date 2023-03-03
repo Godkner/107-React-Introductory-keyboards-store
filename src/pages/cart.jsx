@@ -14,11 +14,12 @@ function Cart(){
             {/* {cart.map((prod)=>(
                 <img></img>
             ))} */}
-            {cart.map(prod  =>
+            {cart.map((prod)  =>(
                 <div className="align-items-center card">
                     <div className="information">
                         <h6>{prod.title}</h6>
-                        <label htmlFor="">Subtotal: ${prod.price}</label>
+                        <label className='l' htmlFor="">Qty: {prod.quantity}</label>
+                        <label className='l' htmlFor="">Subtotal: ${prod.price * prod.quantity}</label>
                         <button className='btn btn-sm btn-danger'>delete</button>
 
                     </div>
@@ -27,7 +28,8 @@ function Cart(){
 
                     </div>
                 
-                </div>)}
+                </div>
+                ))}
                 
            
             

@@ -32,7 +32,7 @@ function Navbar(){
       <form className="d-flex" role="search">
         <Link to='/cart'>
         
-        <button className='button'>{cart.length}</button>
+        <button className='addCart'>{cart.length}</button>
         </Link>
       </form>
     </div>
