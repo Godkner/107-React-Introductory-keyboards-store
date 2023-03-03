@@ -13,6 +13,8 @@ import NotFound from './pages/notFound';
 import GlobalData from './store/globalData';
 import Cart from './pages/cart';
 
+
+
 function App() {
   return (
   <GlobalData>

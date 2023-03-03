@@ -32,7 +32,7 @@ function About(){
     return(
         <div className="about">
             <h1>About me</h1>
-            <h3>Kevin Fierro</h3>
+            <h3 className="name">Kevin Fierro</h3>
             <h4>{getEmail()}</h4>
             <button className="btn btn-outline-dark" onClick={toggleEmail}>Show email</button>
 

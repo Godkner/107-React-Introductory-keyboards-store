@@ -8,7 +8,7 @@
 
 .catalog{
     display: inline-block;
-    background-color: #00337C;
+    background-color: white;
   
 }
 .catalog .filter{
@@ -16,8 +16,12 @@
 
 }
 h1{
-    color: white;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 900px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 h5{
-    color: white;
+    color: black;
 }

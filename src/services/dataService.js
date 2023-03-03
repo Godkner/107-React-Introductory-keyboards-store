@@ -1,9 +1,11 @@
+import axios from "axios";
+
 var catalog=[
     {
         "title": "Ducky one 3 mini black 60%",
         "category": "Keyboard",
         "price": 119.00,
-        "image": "Ducky3black.jpg",
+        "image": "Ducky3black.png",
         "_id": "00001"
     },
     {
@@ -71,14 +73,27 @@ var catalog=[
     }
 ];
 
+
+
 class DataService {
 
-    getProducts() {
+    async getProducts() {
+        let response = await axios.get("http://127.0.0.1:5000/api/catalog");
+        console.log(response.data);
         // TODO: connect to server and retrive to products to display
 
-        return catalog;
+        // use th line below to test w/o a server
+
+        // return catalog;
+        return response.data;
     }
 
+    async saveProduct(product){
+        let response = await axios.post("http://127.0.0.1:5000/api/catalog",product);
+         
+        return response.data;
+
+    }
 
 
 }

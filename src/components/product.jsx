@@ -37,6 +37,8 @@ function Product(props){
     
     return(
         <div className="product">
+
+
             <img src={"/images/" + props.data.image } alt="" />
             <h5>{props.data.title}</h5>
             <div className="prices">
@@ -46,7 +48,8 @@ function Product(props){
             
             <QuantityPicker onChange={onQuantityChange}>
             </QuantityPicker>
-            <button onClick={handleAdd} className="add btn btn-sm btn-outline-dark">Add to car</button>
+            <button onClick={handleAdd} className="add btn btn-sm btn-outline-light">Add to car</button>
+            
         </div>
     )
 }

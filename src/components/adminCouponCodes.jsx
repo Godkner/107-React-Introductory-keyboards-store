@@ -7,12 +7,12 @@ function AdminCouponCodes(){
     const [allCoupons, setAllCoupons]=useState([]);
 
     function textChanged(e){
-        let text= e.target.value;
+        let input= e.target.value;
         let attr= e.target.name;
 
         // create a copy,modidy the copy, set the copy back
         let copy= {...coupon};
-        copy[attr]= text;
+        copy[attr]= input;
         setCoupon(copy);
 
     }
@@ -20,14 +20,14 @@ function AdminCouponCodes(){
     function saveProduct(){
         console.log(coupon);
         // to do: fix the price,should be a number
-        // let copy=[...allCoupons];
-        // copy.push(coupon);
-        // setAllCoupons(copy);
+        let copy=[...allCoupons];
+        copy.push(coupon);
+        setAllCoupons(copy);
     }
 
     return(
         <div className="adminCoupon">
-            <h3>Coupons</h3>
+            <h3>Coupon codes</h3>
             <div class="mb-3">
                  <input name='coupon' onChange={textChanged} type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter the coupon code"></input>
             </div>
@@ -35,9 +35,15 @@ function AdminCouponCodes(){
                 <input name='discount' onChange={textChanged} type="number" class="form-control" placeholder='Enter the discount' ></input>
                     <span class="input-group-text">%</span>
             </div>
-            <button onClick={saveProduct} className="btn btn-dark">Save Product</button>
+            <button onClick={saveProduct} className="btn btn-light button ">Save Product</button>
+
+            <ul className="list-group list-group-numbered">
+            {allCoupons.map(prod => <li className="list-group-item" key={prod.coupon}>{prod.coupon} - {prod.discount}%</li>)}
+            </ul>
 
         </div>
+        
+
     );
 
 }

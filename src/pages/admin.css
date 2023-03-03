@@ -1,5 +1,5 @@
 .admin{
-    background-color: #fafafa;
+    background-color: white;
 
 }
 .admin h1{
@@ -11,4 +11,8 @@
 .admin .parent{
     display: flex;
     justify-content:space-around ;
+}
+ul{
+    margin-top: 10px;
+    text-align: left;
 }

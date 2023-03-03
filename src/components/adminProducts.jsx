@@ -1,9 +1,14 @@
 import "./adminProducts.css"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import DataService from "../services/dataService";
 
 function AdminProducts(){
     const [product,setProduct]=useState({});
     const [allProducts, setAllProducts]=useState([]);
+
+    useEffect(function(){
+        loadCatalog();
+    },[]);
 
     function textChanged(e){
         let text= e.target.value;
@@ -16,12 +21,23 @@ function AdminProducts(){
 
     }
 
-    function saveProduct(){
+    async function saveProduct(){
         console.log(product);
         // to do: fix the price,should be a number
+        let savedProd= {...product};
+        savedProd.price=parseFloat(savedProd.price);
+        let service = new DataService();
+        service.saveProduct(savedProd);
+       
+
         let copy=[...allProducts];
         copy.push(product);
         setAllProducts(copy);
+    }
+    async function loadCatalog(){
+        let service = new DataService();
+        let prod = await service.getProducts();
+        setAllProducts(prod);
     }
 
     return (
@@ -47,10 +63,11 @@ function AdminProducts(){
                     <span class="input-group-text">.00</span>
                     
                 </div>
-                <button onClick={saveProduct} className="btn btn-dark">Save Product</button>
+                <button onClick={saveProduct} className="btn btn-light">Save Product</button>
             </div>
-            <ul>
-            {allProducts.map(prod => <li key={prod.title}>{prod.title}</li>)}
+            
+            <ul className="list-group list-group-numbered">
+            {allProducts.map(prod => <li className="list-group-item" key={prod.title}>{prod.title} - ${prod.price}</li>)}
             </ul>
         </div>
     )
